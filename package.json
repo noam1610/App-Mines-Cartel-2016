@@ -1,0 +1,76 @@
+{
+  "name": "cartel_mines_2016",
+  "description": "cartel_mines_2016",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "gulp test",
+    "jsbeautify": "js-beautify client/**/*.js client/*.js -r",
+    "protractor_debug_1": "./node_modules/protractor/bin/webdriver-manager start",
+    "protractor_debug_2": "./node_modules/protractor/bin/elementexplorer.js http://localhost:5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "angular": "^1.4.6",
+    "angular-animate": "^1.4.6",
+    "angular-mocks": "^1.4.6",
+    "angular-resource": "^1.4.6",
+    "angular-sanitize": "^1.4.6",
+    "angular-ui-router": "^0.2.15",
+    "ionic-sdk": "^1.1.0",
+    "ng-cordova": "^0.1.23-alpha"
+  },
+  "devDependencies": {
+    "browser-sync": "2.10.0",
+    "karma": "0.13.15",
+    "karma-browserify": "4.4.0",
+    "karma-coverage": "0.5.3",
+    "karma-jasmine": "0.3.6",
+    "karma-mocha-reporter": "1.1.1",
+    "karma-phantomjs-launcher": "0.2.1",
+    "karma-sourcemap-loader": "0.3.6",
+    "karma-webpack": "1.7.0",
+    "webpack-dev-server": "1.12.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "browser": {
+    "unitHelper": "./test/unit/unitHelper.js",
+    "lbServices": "./client/scripts/lbServices.js",
+    "ionic": "ionic-sdk/release/js/ionic.js",
+    "ionic-angular": "ionic-sdk/release/js/ionic-angular.js"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "stage": 0,
+          "optional": [
+            "es7.asyncFunctions",
+            "runtime"
+          ],
+          "ignore": [
+            "./node_modules",
+            "./bower_components"
+          ]
+        }
+      ],
+      "html2js-browserify",
+      "cssify",
+      "browserify-shim",
+      "brfs"
+    ]
+  },
+  "browserify-shim": {
+    "lbServices": {
+      "depends": [
+        "angular-resource"
+      ]
+    }
+  }
+}
