@@ -1,5 +1,29 @@
 @import "../../node_modules/ionic-sdk/scss/ionic.scss";
 
-  
+
+.imageFond {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
 
+.head-1 {
+    padding: 1em;
+    color: blue;
+    font-size: 2em;
+}
+
+.head-2 {
+    padding: 0.4em;
+    color: green;
+    font-size: 1.4em;
+}
+
+.content-2 {
+    padding-left: 1.5em;
+    padding-bottom: 0.5em;
+    color: red;
+    font-size: 1.2em;
+}

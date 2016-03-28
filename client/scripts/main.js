@@ -16,6 +16,7 @@ require('ionic-angular');
 var app = angular.module(namespace, ['ionic',
     // 'ionic.service.core',
     // inject:modules start
+    require('./common')(namespace).name
     // inject:modules end
 ]);
 

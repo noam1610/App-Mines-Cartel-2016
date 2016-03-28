@@ -1,0 +1,44 @@
+<ion-side-menus>
+
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-dark nav-title-slide-ios7">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" style="background-color: #252323; background-image: url(images/app/Jo.png); height:{{vm.height}}px; width:{{vm.width}}px;" class="imageFond">
+
+        <div class="head-1">
+            Cartel 2016
+        </div>
+
+        <div class="head-2" ng-repeat="head in vm.menu">
+            {{head.title}}
+            <div class="content-2" ng-repeat="content in head.array">
+                {{content}}
+            </div>
+
+        </div>
+
+        <!--   <header class="bar bar-header bar-stable">
+            <h1 class="title">Menu ToolBox</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item menu-close href="#/menu/home">
+                    Home
+                </ion-item>
+                 <ion-item-divider style="color: red; text-align: center;" align="center">
+                    Resultats sportifs
+                </ion-item-divider>
+                <ion-item menu-close href="#/menu/collection/2">
+                    Collection
+                </ion-item>
+                <ion-item menu-close href="#/menu/product/4">
+                    Product
+                </ion-item>
+            </ion-list>
+        </ion-content> -->
+    </ion-side-menu>
+</ion-side-menus>
