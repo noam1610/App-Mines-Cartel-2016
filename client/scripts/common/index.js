@@ -21,7 +21,7 @@ module.exports = function(namespace) {
 
     var configRoutesDeps = ['$stateProvider', '$urlRouterProvider'];
     var configRoutes = function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/menu');
+        $urlRouterProvider.otherwise('/menu/home');
 
         $stateProvider
             .state('menu', {
@@ -36,6 +36,78 @@ module.exports = function(namespace) {
                     'menuContent': {
                         template: require('./views/home.html'),
                         controller: fullname + '.home as vm'
+                    }
+                }
+            })
+            .state('menu.actu', {
+                url: '/actu',
+                views: {
+                    'menuContent': {
+                        template: require('./views/actu.html'),
+                        controller: fullname + '.actu as vm'
+                    }
+                }
+            })
+            .state('menu.calendar', {
+                url: '/calendar',
+                views: {
+                    'menuContent': {
+                        template: require('./views/calendar.html'),
+                        controller: fullname + '.calendar as vm'
+                    }
+                }
+            })
+            .state('menu.rescontinu', {
+                url: '/rescontinu',
+                views: {
+                    'menuContent': {
+                        template: require('./views/rescontinu.html'),
+                        controller: fullname + '.rescontinu as vm'
+                    }
+                }
+            })
+            .state('menu.resdelegation', {
+                url: '/resdelegation',
+                views: {
+                    'menuContent': {
+                        template: require('./views/resdelegation.html'),
+                        controller: fullname + '.resdelegation as vm'
+                    }
+                }
+            })
+            .state('menu.sport', {
+                url: '/sport',
+                views: {
+                    'menuContent': {
+                        template: require('./views/sport.html'),
+                        controller: fullname + '.sport as vm'
+                    }
+                }
+            })
+            .state('menu.classement', {
+                url: '/classement',
+                views: {
+                    'menuContent': {
+                        template: require('./views/classement.html'),
+                        controller: fullname + '.classement as vm'
+                    }
+                }
+            })
+            .state('menu.sponsor', {
+                url: '/sponsor',
+                views: {
+                    'menuContent': {
+                        template: require('./views/sponsor.html'),
+                        controller: fullname + '.sponsor as vm'
+                    }
+                }
+            })
+            .state('menu.contact', {
+                url: '/contact',
+                views: {
+                    'menuContent': {
+                        template: require('./views/contact.html'),
+                        controller: fullname + '.contact as vm'
                     }
                 }
             });

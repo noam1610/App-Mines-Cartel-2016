@@ -15,15 +15,62 @@ module.exports = function(app) {
         vm.height = $window.innerHeight;
 
         vm.menu = [{
-            'title': 'news',
-            'array': ['acceuil', 'actu', 'calendar']
+            'title': 'NEWS',
+            'array': [{
+                'title': 'acceuil',
+                'page': 'home'
+            }, {
+                'title': 'actualité',
+                'page': 'actu'
+            }, {
+                'title': 'Calendrier',
+                'page': 'calendar'
+            }]
         }, {
             'title': 'RESULTAT',
-            'array': ['en continu', 'par sport', 'par délégation', 'classement']
+            'array': [{
+                'title': 'En Continue',
+                'page': 'rescontinu'
+            }, {
+                'title': 'par sport',
+                'page': 'sport'
+            }, {
+                'title': 'Par Délégation',
+                'page': 'resdelegation'
+            },{
+                'title': 'classement',
+                'page': 'classement'
+            }]
         }, {
-            'title': 'Communiquer',
-            'array': ['Sponsor', 'contact']
+            'title': 'COMMUNIQUER',
+            'array': [{
+                'title': 'Contact',
+                'page': 'contact'
+            }, {
+                'title': 'Sponsor',
+                'page': 'sponsor'
+            }]
         }];
+
+        // vm.menu = [{
+        //     'title': 'news',
+        //     'array': [{
+        //         'title': 'acceuil',
+        //         'page': 'home'
+        //     }, {
+        //         'title': 'actualité',
+        //         'page': 'actu'
+        //     }, {
+        //         'title': 'Calendrier',
+        //         'page': 'calendar'
+        //     }]
+        // }, {
+        //     'title': 'RESULTAT',
+        //     'array': ['en continu', 'par sport', 'par délégation', 'classement']
+        // }, {
+        //     'title': 'Communiquer',
+        //     'array': ['Sponsor', 'contact']
+        // }];
 
     }
 
