@@ -20,8 +20,10 @@ module.exports = function(namespace) {
     // inject:folders end
     app.namespace = app.namespace || {};
 
-    var configRoutesDeps = ['$stateProvider', '$urlRouterProvider'];
-    var configRoutes = function($stateProvider, $urlRouterProvider) {
+    var configRoutesDeps = ['$stateProvider', '$urlRouterProvider', '$httpProvider'];
+    var configRoutes = function($stateProvider, $urlRouterProvider, $httpProvider) {
+
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
         $urlRouterProvider.otherwise('/menu/home');
 
         $stateProvider
@@ -46,6 +48,15 @@ module.exports = function(namespace) {
                     'menuContent': {
                         template: require('./views/actu.html'),
                         controller: fullname + '.actu as vm'
+                    }
+                }
+            })
+            .state('menu.actuDetail', {
+                url: '/actuDetail/:id',
+                views: {
+                    'menuContent': {
+                        template: require('./views/actuDetail.html'),
+                        controller: fullname + '.actuDetail as vm'
                     }
                 }
             })

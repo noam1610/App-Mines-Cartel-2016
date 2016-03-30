@@ -1,4 +1,23 @@
-<ion-view title="Accueil" style="background-color: rgb(100,140,230);">
-    <ion-content class="has-header">
+<ion-view title="Event" style="background-color:white;">
+    <ion-content>
+        <div class="bar bar-calm bar-header">
+            <button side="right" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            <div class="h1 title">Calendrier</div>
+            <button class="button button-clear button-positive">Edit</button>
+        </div>
+
+        <div class="has-header" style="padding-top: 3.5em;">
+            <h3 align="center">Suivez en direct l'organisation du cartel !!!</h3>
+
+            <div class="list">
+
+                <a class="item item-thumbnail-left" ng-repeat="Event in vm.evenement" style="background: none;">
+                    <img src="images/app/logoMines.png">
+                    <h2>{{Event.titre}}</h2>
+                    <p>{{Event.date}}</p>
+                </a>
+
+            </div>
+        </div>
     </ion-content>
 </ion-view>

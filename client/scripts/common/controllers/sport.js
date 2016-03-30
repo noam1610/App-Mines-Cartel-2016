@@ -11,10 +11,27 @@ module.exports = function(app) {
         var vm = this;
         vm.controllername = fullname;
 
-        var activate = function() {
-
-        };
-        activate();
+        vm.sports = ['rugby_h',
+            'rugby_f',
+            'natation_h',
+            'natation_f',
+            'petanque',
+            'tennisdetable',
+            'volley_h',
+            'volley_f',
+            'cross_h',
+            'cross_f',
+            'handball_h',
+            'handball_f',
+            'basket_h',
+            'basket_f',
+            'tennis',
+            'badminton',
+            'escalade_h',
+            'escalade_f',
+            'athle',
+            'pompom'
+        ];
     }
 
     controller.$inject = deps;

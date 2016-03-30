@@ -16,26 +16,40 @@ module.exports = function(app) {
         // };
 
         var req = {
-            method: 'GET',
-            url: ' http://cartel2016.com/api/get/planningmatch.php?delegation=paris',
+            method: 'JSONP',
+            url: 'http://cartel2016.com/api/get/actualites.php/callback=JSON_CALLBACK',
             headers: {
                 'Access-Control-Allow-Origin': '*'
             }
         };
-        http: //cartel2016.com/api/get/planningmatch.php?delegation=paris
 
-            var Actu = function(token) {
-                // var urlActu = 'http://cartel2016.com/api/get/actualites.php';
+        var Actu = function() {
+            return $http.get('http://cartel2016.com/api/get/actualites.php')
+                .then(function(data) {
+                    console.log('noam', data);
+                    return data.data;
+                });
+        };
 
-                return $http.jsonp(req.url, req)
-                    .then(function(response) {
-                        return response;
-                    });
+        var ActuDetail = function(id) {
+            return $http.get('http://cartel2016.com/api/get/actualites.php')
+                .then(function(data) {
+                    console.log('noam', data);
+                    return data.data;
+                });
+        };
 
-            };
+        var Event = function() {
+            return $http.get('http://cartel2016.com/api/get/evenements.php')
+                .then(function(data) {
+                    console.log('noam', data);
+                    return data.data;
+                });
+        };
 
         return {
-            Actu: Actu
+            Actu: Actu,
+           Event: Event
         };
     }
 

@@ -11,10 +11,8 @@ module.exports = function(app) {
         var vm = this;
         vm.controllername = fullname;
 
-        var activate = function() {
+        vm.delegation = ['Paris', 'Nancy', 'Etienne', 'Albi', 'Douai', 'Ales', 'Maroc'];
 
-        };
-        activate();
     }
 
     controller.$inject = deps;

@@ -4,6 +4,7 @@ module.exports = function(app) {
     // inject:start
     require('./accueil')(app);
     require('./actu')(app);
+    require('./actuDetail')(app);
     require('./calendar')(app);
     require('./classement')(app);
     require('./contact')(app);

@@ -1,21 +1,27 @@
 <ion-side-menus>
 
     <ion-side-menu-content>
-        <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+        <!-- <ion-nav-bar class="bar-positive nav-title-slide-ios7">
             <ion-nav-buttons side="primary">
-                <button menu-toggle="left" style="color : white" class="button button-light button-icon icon ion-navicon"></button>
+                <button side="right" menu-toggle="left" style="color : white" class="button button-light button-icon icon ion-navicon"></button>
             </ion-nav-buttons>
             <ion-nav-buttons side="secondary">
                 <button side="right" class="button button-clear button-light icon ion-ios-clock-outline ">Edit</button>
             </ion-nav-buttons>
-        </ion-nav-bar>
-        <ion-nav-view name="menuContent" animation="slide-left-right">
+        </ion-nav-bar> -->
+        <ion-nav-view name="menuContent" animation="slide-left">
         </ion-nav-view>
-
     </ion-side-menu-content>
 
-    <ion-side-menu side="left" style="background-color: #0000; background-image: url(images/app/Jo.png); height:{{vm.height}}px; width:{{vm.width}}px;" class="imageFond">
-        <ion-scroll direction="y">
+    <!--  <ion-side-menu side="left" overflow-scroll="true">
+      
+      <ion-scroll zooming="true" direction="xy" style="height:95%">
+          </ion-scroll>
+     
+    </ion-side-menu> -->
+
+    <ion-side-menu side="left" overflow-scroll="true" style="background-color: #0000; background-image: url(images/app/Jo.png); height:{{vm.height}}px; width:{{vm.width}}px;" class="imageFond">
+        <ion-scroll zooming="true" style="height:95%" direction="y">
             <div class="head-1">
                 Cartel 2016
             </div>
@@ -31,24 +37,5 @@
             </div>
         </ion-scroll>
 
-        <!--   <header class="bar bar-header bar-stable">
-            <h1 class="title">Menu ToolBox</h1>
-        </header>
-        <ion-content class="has-header">
-            <ion-list>
-                <ion-item menu-close href="#/menu/home">
-                    Home
-                </ion-item>
-                 <ion-item-divider style="color: red; text-align: center;" align="center">
-                    Resultats sportifs
-                </ion-item-divider>
-                <ion-item menu-close href="#/menu/collection/2">
-                    Collection
-                </ion-item>
-                <ion-item menu-close href="#/menu/product/4">
-                    Product
-                </ion-item>
-            </ion-list>
-        </ion-content> -->
     </ion-side-menu>
 </ion-side-menus>

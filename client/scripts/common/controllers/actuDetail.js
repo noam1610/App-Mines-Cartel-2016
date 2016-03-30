@@ -1,21 +1,16 @@
 'use strict';
-var controllername = 'calendar';
+var controllername = 'actuDetail';
 
 module.exports = function(app) {
     var fullname = app.name + '.' + controllername;
     /*jshint validthis: true */
 
-    var deps = [app.name + '.data'];
+    var deps = ['$stateParams', app.name + '.data'];
 
-    function controller(data) {
+    function controller($stateParams, data) {
         var vm = this;
         vm.controllername = fullname;
 
-        data.Event()
-            .then(function(evenement) {
-                vm.evenement = evenement;
-                console.log(vm.evenement);
-            });
     }
 
     controller.$inject = deps;

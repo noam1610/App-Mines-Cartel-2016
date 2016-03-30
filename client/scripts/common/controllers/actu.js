@@ -16,11 +16,14 @@ module.exports = function(app) {
         // }));
 
         data.Actu()
-            .then(function(pictures) {
-                console.log('test');
-                vm.pictures = pictures;
-                console.log('djhfs', vm.pictures);
+            .then(function(actualite) {
+                vm.actualite = actualite;
+                console.log(vm.actualite);
             });
+
+        
+        
+        
 
     }
 
