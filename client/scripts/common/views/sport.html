@@ -1,18 +1,4 @@
-<ion-view title="Markel" style="background-color: #252323; background-image: url(images/app/serise.png); height:{{vm.height}}px; width:;" class="imageFond">
-    <ion-nav-buttons side="primary">
-        <button menu-toggle="left" style="color : red;" class="button button-light button-icon icon ion-navicon"></button>
-    </ion-nav-buttons>
-    <ion-nav-buttons side="secondary">
-        <button side="right" class="button button-clear button-light icon ion-ios-clock-outline ">Edit</button>
-    </ion-nav-buttons>
-
+<ion-view title="Sport" style="background-color: rgb(100,140,230);">
     <ion-content class="has-header">
-        <div style="padding-top: {{vm.height/2}}px; color : white;"></div>
-        <div ng-repeat="category in vm.categories" style="padding-left: 10px; padding-right: 10px; text-align: left;color:white;">
-            <a ui-sref="menu.collection({id : {{category.id}} })" class="button button-block icon-right ion-chevron-right" style="text-align: left; background-color: rgba(255, 255, 255, 0) !important; border: none;color:white;">
-                <h3 style="color: white">{{category.name}}</h3>
-            </a>
-        </div>
-       
     </ion-content>
 </ion-view>

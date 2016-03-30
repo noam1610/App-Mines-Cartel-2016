@@ -15,20 +15,21 @@
     </ion-side-menu-content>
 
     <ion-side-menu side="left" style="background-color: #0000; background-image: url(images/app/Jo.png); height:{{vm.height}}px; width:{{vm.width}}px;" class="imageFond">
-
-        <div class="head-1">
-            Cartel 2016
-        </div>
-
-        <div class="head-2" ng-repeat="head in vm.menu">
-            {{head.title}}
-            <div class="content-2" align="left" ng-repeat="content in head.array">
-                <!-- <a href="{{'#/menu/' + content.page }}" align="center"> {{content.title}} </a> -->
-                <button  align="center" class="button button-clear button-positive" href="{{'#/menu/' + content.page }}">
-                    {{content.title}}
-                </button>
+        <ion-scroll direction="y">
+            <div class="head-1">
+                Cartel 2016
             </div>
-        </div>
+
+            <div class="head-2" ng-repeat="head in vm.menu">
+                {{head.title}}
+                <div class="content-2" align="left" ng-repeat="content in head.array">
+                    <!-- <a href="{{'#/menu/' + content.page }}" align="center"> {{content.title}} </a> -->
+                    <button align="center" class="button button-clear button-positive" ui-sref="{{'menu.' + content.page }}">
+                        {{content.title}}
+                    </button>
+                </div>
+            </div>
+        </ion-scroll>
 
         <!--   <header class="bar bar-header bar-stable">
             <h1 class="title">Menu ToolBox</h1>

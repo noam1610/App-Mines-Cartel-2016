@@ -5,16 +5,23 @@ module.exports = function(app) {
     var fullname = app.name + '.' + controllername;
     /*jshint validthis: true */
 
-    var deps = [];
+    var deps = [app.name + '.data'];
 
-    function controller() {
+    function controller(data) {
         var vm = this;
         vm.controllername = fullname;
 
-        var activate = function() {
+        // console.log(data.Actu().then(function(reponse) {
+        //     console.log(reponse);
+        // }));
 
-        };
-        activate();
+        data.Actu()
+            .then(function(pictures) {
+                console.log('test');
+                vm.pictures = pictures;
+                console.log('djhfs', vm.pictures);
+            });
+
     }
 
     controller.$inject = deps;
