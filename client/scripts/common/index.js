@@ -56,7 +56,7 @@ module.exports = function(namespace) {
                 views: {
                     'menuContent': {
                         template: require('./views/actuDetail.html'),
-                        controller: fullname + '.actuDetail as vm'
+                        controller: fullname + '.actu as vm'
                     }
                 }
             })

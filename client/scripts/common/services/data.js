@@ -49,7 +49,8 @@ module.exports = function(app) {
 
         return {
             Actu: Actu,
-           Event: Event
+            Event: Event,
+            ActuDetail: ActuDetail
         };
     }
 
