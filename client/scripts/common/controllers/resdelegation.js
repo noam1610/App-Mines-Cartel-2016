@@ -5,11 +5,15 @@ module.exports = function(app) {
     var fullname = app.name + '.' + controllername;
     /*jshint validthis: true */
 
-    var deps = [];
+    var deps = ['$ionicHistory'];
 
-    function controller() {
+    function controller($ionicHistory) {
         var vm = this;
         vm.controllername = fullname;
+
+         vm.myGoBack = function() {
+            $ionicHistory.goBack();
+        };
 
         vm.delegation = ['Paris', 'Nancy', 'Etienne', 'Albi', 'Douai', 'Ales', 'Maroc'];
 

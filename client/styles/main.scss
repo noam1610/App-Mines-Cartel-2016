@@ -1,13 +1,10 @@
 @import "../../node_modules/ionic-sdk/scss/ionic.scss";
-
-
 .imageFond {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
-
 
 .head-1 {
     padding: 1em;
@@ -30,7 +27,6 @@
     font-size: 1em;
 }
 
-
 .bold {
     font-weight: bold;
 }
@@ -38,7 +34,36 @@
 
 
 
+.equipe{
+    font-family: cursive;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 
+.scoreRouge {
+    font-family: cursive;
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(210, 20, 34);
+    text-align: center;
+    text-transform: uppercase;
+}
 
+.scoreVert {
+    font-family: cursive;
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(120, 230, 34);
+    text-align: center;
+    text-transform: uppercase;
+}
 
+.commentaire {
+    font-family: monospace;
+    font-style: italic;
+    text-align: center;
+    font-weight: 900;
+}

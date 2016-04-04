@@ -96,6 +96,15 @@ module.exports = function(namespace) {
                     }
                 }
             })
+            .state('menu.sportDetail', {
+                url: '/sportDetail/:id',
+                views: {
+                    'menuContent': {
+                        template: require('./views/sportDetail.html'),
+                        controller: fullname + '.sport as vm'
+                    }
+                }
+            })
             .state('menu.classement', {
                 url: '/classement',
                 views: {

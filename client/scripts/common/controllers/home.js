@@ -5,14 +5,18 @@ module.exports = function(app) {
     var fullname = app.name + '.' + controllername;
     /*jshint validthis: true */
 
-    var deps = ['$window'];
+    var deps = ['$window','$ionicHistory'];
 
-    function controller($window) {
+    function controller($window, $ionicHistory) {
         var vm = this;
         vm.controllername = fullname;
 
         vm.width = $window.innerWidth;
         vm.height = $window.innerHeight;
+
+         vm.myGoBack = function() {
+            $ionicHistory.goBack();
+        };
       
     }
 

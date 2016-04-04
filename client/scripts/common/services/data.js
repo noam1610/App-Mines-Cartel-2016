@@ -23,6 +23,14 @@ module.exports = function(app) {
             }
         };
 
+        var getSport = function(sport) {
+            return $http.get('http://cartel2016.com/api/get/resultats.php?sport=' + sport)
+                .then(function(data) {
+                    console.log('noam', data);
+                    return data.data;
+                });
+        };
+
         var Actu = function() {
             return $http.get('http://cartel2016.com/api/get/actualites.php')
                 .then(function(data) {
@@ -50,7 +58,8 @@ module.exports = function(app) {
         return {
             Actu: Actu,
             Event: Event,
-            ActuDetail: ActuDetail
+            ActuDetail: ActuDetail,
+            getSport: getSport
         };
     }
 

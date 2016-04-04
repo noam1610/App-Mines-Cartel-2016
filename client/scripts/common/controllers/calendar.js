@@ -5,9 +5,9 @@ module.exports = function(app) {
     var fullname = app.name + '.' + controllername;
     /*jshint validthis: true */
 
-    var deps = [app.name + '.data'];
+    var deps = [app.name + '.data', '$ionicHistory'];
 
-    function controller(data) {
+    function controller(data, $ionicHistory) {
         var vm = this;
         vm.controllername = fullname;
 
@@ -16,6 +16,10 @@ module.exports = function(app) {
                 vm.evenement = evenement;
                 console.log(vm.evenement);
             });
+
+        vm.myGoBack = function() {
+            $ionicHistory.goBack();
+        };
     }
 
     controller.$inject = deps;

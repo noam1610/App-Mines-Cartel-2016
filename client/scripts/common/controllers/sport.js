@@ -5,11 +5,33 @@ module.exports = function(app) {
     var fullname = app.name + '.' + controllername;
     /*jshint validthis: true */
 
-    var deps = [];
+    var deps = ['$ionicHistory', '$stateParams', app.name + '.data'];
 
-    function controller() {
+    function controller($ionicHistory, $stateParams, data) {
         var vm = this;
         vm.controllername = fullname;
+
+        console.log($stateParams.id);
+        vm.sport = $stateParams.id;
+
+        vm.vainqueur = function(resultat) {
+            if(resultat.score1 > resultat.score2){
+                 return true;
+            };
+            return false;
+        };
+
+        if ($stateParams.id) {
+            data.getSport($stateParams.id)
+                .then(function(resultat) {
+                    vm.resultat = resultat;
+                    console.log('resultat', resultat);
+                });
+        };
+
+        vm.myGoBack = function() {
+            $ionicHistory.goBack();
+        };
 
         vm.sports = ['rugby_h',
             'rugby_f',
@@ -21,6 +43,7 @@ module.exports = function(app) {
             'volley_f',
             'cross_h',
             'cross_f',
+            'handball',
             'handball_h',
             'handball_f',
             'basket_h',
