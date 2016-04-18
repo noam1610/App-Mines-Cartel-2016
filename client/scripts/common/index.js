@@ -87,6 +87,15 @@ module.exports = function(namespace) {
                     }
                 }
             })
+             .state('menu.resdelegationDetail', {
+                url: '/resdelegationDetail/:id',
+                views: {
+                    'menuContent': {
+                        template: require('./views/resdelegationDetail.html'),
+                        controller: fullname + '.resdelegation as vm'
+                    }
+                }
+            })
             .state('menu.sport', {
                 url: '/sport',
                 views: {

@@ -3,7 +3,7 @@
 var angular = require('angular');
 require('angular-mocks');
 var app = require('../')('app');
-var controllername = 'actu';
+var controllername = 'resDelegationDetail';
 describe(app.name, function() {
 
     describe('Controllers', function() {

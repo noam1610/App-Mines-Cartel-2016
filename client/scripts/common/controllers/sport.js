@@ -15,8 +15,9 @@ module.exports = function(app) {
         vm.sport = $stateParams.id;
 
         vm.vainqueur = function(resultat) {
-            if(resultat.score1 > resultat.score2){
-                 return true;
+            if (Number(resultat.score1) > Number(resultat.score2)) {
+                return true;
+
             };
             return false;
         };

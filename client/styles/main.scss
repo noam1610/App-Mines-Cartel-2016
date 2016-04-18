@@ -1,4 +1,10 @@
 @import "../../node_modules/ionic-sdk/scss/ionic.scss";
+.home {
+    font-family: serif;
+    font-weight: bold;
+    color: rgb(100,140,230);
+}
+
 .imageFond {
     width: 100%;
     background-repeat: no-repeat;
@@ -31,17 +37,13 @@
     font-weight: bold;
 }
 
-
-
-
-.equipe{
+.equipe {
     font-family: cursive;
     font-weight: 700;
     font-style: italic;
     text-align: center;
     text-transform: uppercase;
 }
-
 
 .scoreRouge {
     font-family: cursive;

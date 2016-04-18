@@ -17,10 +17,12 @@ module.exports = function(app) {
             $ionicHistory.goBack();
         };
 
+
         data.Actu()
             .then(function(actualite) {
+                console.log('DATA ACTU');
                 vm.actualite = actualite;
-                //console.log(vm.actualite);
+                console.log(vm.actualite);
 
                 if ($stateParams.id) {
                     idActu = $stateParams.id;

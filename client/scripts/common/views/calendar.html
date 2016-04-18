@@ -14,7 +14,8 @@
                 <a class="item item-thumbnail-left" ng-repeat="Event in vm.evenement" style="background: none;">
                     <img src="images/app/logoMines.png">
                     <h2>{{Event.titre}}</h2>
-                    <p>{{Event.date}}</p>
+                    <p>{{Event.date}} {{Event.heure}}</p>
+                    <div>{{Event.lieu}}</div>
                 </a>
 
             </div>

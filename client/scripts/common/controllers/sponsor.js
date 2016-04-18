@@ -5,13 +5,22 @@ module.exports = function(app) {
     var fullname = app.name + '.' + controllername;
     /*jshint validthis: true */
 
-    var deps = ['$ionicHistory'];
+    var deps = ['$ionicHistory', '$window'];
 
-    function controller($ionicHistory) {
+    function controller($ionicHistory, $window) {
         var vm = this;
         vm.controllername = fullname;
 
-       vm.myGoBack = function() {
+        vm.width = $window.innerWidth;
+        vm.height = $window.innerHeight;
+
+        vm.listDesContacts = [{
+            'title': 'Mines De Paris',
+            'logo': 'images/app/logoMines.png',
+            'description': 'Bla kjdsf ldkf skdjf'
+        }];
+
+        vm.myGoBack = function() {
             $ionicHistory.goBack();
         };
     }

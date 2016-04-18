@@ -1,0 +1,43 @@
+<ion-view title="Resultat Delegation" style="background-color:white;">
+    <ion-content>
+        <div class="bar bar-calm bar-header">
+            <button side="right" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            <div class="h1 title">Resultat Delegation </div>
+            <button class="button button-clear button-positive" ng-click="vm.myGoBack()">Back</button>
+        </div>
+
+        <div class="has-header" style="padding-top: 4.5em;">
+            <h3 align="center">Résultat Pour  {{vm.delegation1}}</h3>
+            <ul class="list">
+                <li class="item" ng-repeat="resultat in vm.resultat">
+                    <div class="row">
+                        <div class="col-33 equipe" align="center">
+                            {{resultat.equipe1}}
+                        </div>
+                        <div class="col-33" align="center">
+                            <div>
+                                <p>{{resultat.date}}</p>
+                            </div>
+
+                            <div ng-if="vm.vainqueur(resultat)">
+                                <span class="scoreVert">{{resultat.score1}}</span> -
+                                <span class="scoreRouge">{{resultat.score2}}</span>
+                            </div>
+                            <div ng-if="!vm.vainqueur(resultat)">
+                                <span class="scoreRouge">{{resultat.score1}}</span> -
+                                <span class="scoreVert">{{resultat.score2}}</span>
+                            </div>
+
+                        </div>
+                        <div class="col-33 equipe" align="center">
+                            {{resultat.equipe2}}
+                        </div>
+                    </div>
+                    <div class="row commentaire" align="center">
+                        Com': {{resultat.description}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>

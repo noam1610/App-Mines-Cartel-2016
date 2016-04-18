@@ -31,11 +31,45 @@ module.exports = function(app) {
                 });
         };
 
-        var Actu = function() {
-            return $http.get('http://cartel2016.com/api/get/actualites.php')
+        var getResultat = function(sport) {
+            return $http.get('http://cartel2016.com/api/get/resultats.php?sport=' + sport)
                 .then(function(data) {
                     console.log('noam', data);
                     return data.data;
+                });
+        };
+
+        var getDelegation = function(delegation) {
+
+            return $http.get('http://cartel2016.com/api/get/resultats.php?delegation_equipe1=' + delegation)
+                .then(function(data1) {
+                    console.log('DATA1', data1.data);
+                    return $http.get('http://cartel2016.com/api/get/resultats.php?delegation_equipe2=' + delegation)
+                        .then(function(data2) {
+                            console.log('DATA2', data2.data);
+                            console.log((data1.data).concat(data2.data));
+                            return (data1.data).concat(data2.data);
+                        });
+                });
+        };
+
+        var Actu = function() {
+
+            var req2 = {
+                method: 'GET',
+                url: 'http://cartel2016.com/api/get/actualites.php',
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                }
+            };
+
+            return $http.get(req2.url)
+                .then(function(data) {
+                    console.log('noam', data.data);
+                    return data.data;
+                }, function(err) {
+                    console.log('err', err);
+                    return err;
                 });
         };
 
@@ -59,7 +93,9 @@ module.exports = function(app) {
             Actu: Actu,
             Event: Event,
             ActuDetail: ActuDetail,
-            getSport: getSport
+            getSport: getSport,
+            getDelegation: getDelegation
+
         };
     }
 

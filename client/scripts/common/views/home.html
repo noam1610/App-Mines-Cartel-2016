@@ -1,12 +1,19 @@
-<ion-view title="Accueil" style="background-color: rgb(100,140,230);">
+<ion-view title="Accueil" style="background-color: white">
 
-    <ion-content >
-        <div class="bar bar-header">
+    <ion-content>
+        <div class="bar bar-calm bar-header">
             <button side="right" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
             <div class="h1 title">Accueil</div>
             <button class="button button-clear button-positive" ng-click="vm.myGoBack()">Back</button>
         </div>
+        <div class="has-header" style="padding-top: 4.5em;">
+            <h3 class="home" align="center">Bienvenue à Paris pour la 43ème édition du Cartel des Mines !</h3>
+            <img style="width: {{vm.width}}px;" src="images/app/Logo_Cartel_Final.png" alt="">
+        </div>
 
+        <h3 class="home" align="center">21 - 24 Avril 2016</h3>
+        <img style="width: {{vm.width/2}}px;display: block; margin-left: auto; margin-right: auto;" src="images/app/logoMines.png" alt="">
+        </div>
 
     </ion-content>
 </ion-view>

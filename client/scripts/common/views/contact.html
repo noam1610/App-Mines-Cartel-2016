@@ -1,4 +1,21 @@
-<ion-view title="Accueil" style="background-color: rgb(100,140,230);">
-    <ion-content class="has-header">
+<ion-view title="Contact" style="background-color: white">
+
+    <ion-content>
+        <div class="bar bar-calm bar-header">
+            <button side="right" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            <div class="h1 title">Contact</div>
+            <button class="button button-clear button-positive" ng-click="vm.myGoBack()">Back</button>
+        </div>
+        <div class="has-header" style="padding-top: 4.5em;"></div>
+
+        <div class="list">
+            <div class="item" ng-repeat="contact in vm.listDesContacts">
+                <div>
+                    <h3 class="home" align="center">{{contact.Name}}</h3>
+                    <p class="home" align="center"> {{contact.description}}</p>
+                    <img style="width: {{vm.width/2}}px;display: block; margin-left: auto; margin-right: auto;" src="{{contact.logo}}" alt="">
+                </div>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

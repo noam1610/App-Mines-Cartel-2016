@@ -30,36 +30,36 @@ module.exports = function(app) {
             'title': 'RESULTAT',
             'array': [
 
-            // {
-  //     'title': 'En Continue',
-  //     'page': 'rescontinu'
-  // },
+                // {
+                //     'title': 'En Continue',
+                //     'page': 'rescontinu'
+                // },
 
-             {
-                'title': 'par sport',
-                'page': 'sport'
-            }, {
-                'title': 'Par Délégation',
-                'page': 'resdelegation'
-            }
+                {
+                    'title': 'par sport',
+                    'page': 'sport'
+                }, {
+                    'title': 'Par Délégation',
+                    'page': 'resdelegation'
+                }
 
-            // ,{
-            //     'title': 'classement',
-            //     'page': 'classement'
-            // }
+                // ,{
+                //     'title': 'classement',
+                //     'page': 'classement'
+                // }
 
             ]
         }, {
             'title': 'COMMUNIQUER',
             'array': [
 
-            // {
-            //     'title': 'Contact',
-            //     'page': 'contact'
-            // }, {
-            //     'title': 'Sponsor',
-            //     'page': 'sponsor'
-            // }
+                {
+                    'title': 'Contact',
+                    'page': 'contact'
+                }, {
+                    'title': 'Sponsor',
+                    'page': 'sponsor'
+                }
 
             ]
         }];
