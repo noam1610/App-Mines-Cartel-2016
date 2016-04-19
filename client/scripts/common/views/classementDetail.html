@@ -1,0 +1,43 @@
+<ion-view title="Classement" style="background-color:white;">
+    <ion-content>
+        <div class="bar bar-calm bar-header">
+            <button side="right" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            <div class="h1 title">Classement</div>
+            <button class="button button-clear button-positive" ng-click="vm.myGoBack()">Back</button>
+        </div>
+
+        <div class="has-header" style="padding-top: 4.5em;">
+
+            <div class="list" ng-repeat="poule in vm.classement">
+
+                <h3 class="home" align="center">{{poule.nom}}</h3>
+                <ul class="list">
+                    <li class="item" ng-repeat="class in poule.classement">
+                        <div class="row">
+                            <div class="col-33 equipe" style="" align="center">
+                                {{class.classements}}
+                            </div>
+                            <div class="col-33" align="center">
+
+                                <div>
+                                    {{class.delegation}}
+                                </div>
+
+                                <div>
+                                    {{class.equipe}}
+                                </div>
+
+                            </div>
+                            <div class="col-33 equipe" align="center">
+                                {{class.points}}
+                            </div>
+                        </div>
+                        <!--  <div class="row commentaire" align="center">
+                            Com': {{resultat.description}}
+                        </div> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

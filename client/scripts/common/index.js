@@ -87,7 +87,7 @@ module.exports = function(namespace) {
                     }
                 }
             })
-             .state('menu.resdelegationDetail', {
+            .state('menu.resdelegationDetail', {
                 url: '/resdelegationDetail/:id',
                 views: {
                     'menuContent': {
@@ -123,12 +123,30 @@ module.exports = function(namespace) {
                     }
                 }
             })
+            .state('menu.classementDetail', {
+                url: '/classementDetail/:id',
+                views: {
+                    'menuContent': {
+                        template: require('./views/classementDetail.html'),
+                        controller: fullname + '.classement as vm'
+                    }
+                }
+            })
             .state('menu.sponsor', {
                 url: '/sponsor',
                 views: {
                     'menuContent': {
                         template: require('./views/sponsor.html'),
                         controller: fullname + '.sponsor as vm'
+                    }
+                }
+            })
+            .state('menu.planning', {
+                url: '/planning',
+                views: {
+                    'menuContent': {
+                        template: require('./views/planning.html'),
+                        controller: fullname + '.planning as vm'
                     }
                 }
             })

@@ -17,23 +17,23 @@ module.exports = function(app) {
         vm.menu = [{
             'title': 'NEWS',
             'array': [{
-                'title': 'acceuil',
-                'page': 'home'
-            }, {
-                'title': 'actualité',
-                'page': 'actu'
-            }, {
-                'title': 'Calendrier',
-                'page': 'calendar'
-            }]
+                    'title': 'acceuil',
+                    'page': 'home'
+                }, {
+                    'title': 'actualité',
+                    'page': 'actu'
+                }, {
+                    'title': 'Calendrier',
+                    'page': 'calendar'
+                }, {
+                    'title': 'Planning des match',
+                    'page': 'planning'
+                },
+
+            ]
         }, {
             'title': 'RESULTAT',
             'array': [
-
-                // {
-                //     'title': 'En Continue',
-                //     'page': 'rescontinu'
-                // },
 
                 {
                     'title': 'par sport',
@@ -43,10 +43,10 @@ module.exports = function(app) {
                     'page': 'resdelegation'
                 }
 
-                // ,{
-                //     'title': 'classement',
-                //     'page': 'classement'
-                // }
+                , {
+                    'title': 'classement',
+                    'page': 'classement'
+                }
 
             ]
         }, {
