@@ -39,7 +39,7 @@ module.exports = function(app) {
             'natation_h',
             'natation_f',
             'petanque',
-            'tennisdetable',
+            'tennis_de_table',
             'volley_h',
             'volley_f',
             'cross_h',

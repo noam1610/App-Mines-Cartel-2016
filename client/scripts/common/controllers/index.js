@@ -10,6 +10,7 @@ module.exports = function(app) {
     require('./contact')(app);
     require('./home')(app);
     require('./menu')(app);
+    require('./planning')(app);
     require('./resDelegationDetail')(app);
     require('./rescontinu')(app);
     require('./resdelegation')(app);

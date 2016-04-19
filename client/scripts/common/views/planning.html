@@ -1,8 +1,8 @@
-<ion-view title="Classement" style="background-color:white;">
+<ion-view title="Planning" style="background-color:white;">
     <ion-content>
         <div class="bar bar-calm bar-header">
             <button side="right" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-            <div class="h1 title">Classement</div>
+            <div class="h1 title">Planning</div>
             <button class="button button-clear button-positive" ng-click="vm.myGoBack()">Back</button>
         </div>
 
@@ -12,7 +12,7 @@
 
                 <h4 align="center" style="color: blue">Votre sport</h4>
                 <ul class="list">
-                    <li class="item bold" ng-repeat="sport in vm.sports" align="center" style="color: rgb(120,120,230)" ui-sref="menu.classementDetail({ id: sport })">
+                    <li class="item bold" ng-repeat="sport in vm.sports" align="center" style="color: rgb(120,120,230)" ui-sref="menu.sportDetail({ id: sport })">
                         {{sport}}
                     </li>
                 </ul>

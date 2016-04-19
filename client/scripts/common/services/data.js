@@ -39,18 +39,21 @@ module.exports = function(app) {
                 });
         };
 
+        var getClassement = function(sport) {
+            return $http.get('http://cartel2016.com/api/get/classement.php?sport=' + sport)
+                .then(function(data) {
+                    console.log('classement', data);
+                    return data.data;
+                });
+        };
+
         var getDelegation = function(delegation) {
 
-            return $http.get('http://cartel2016.com/api/get/resultats.php?delegation_equipe1=' + delegation)
+            return $http.get('http://cartel2016.com/api/get/resultats.php?delegation=' + delegation)
                 .then(function(data1) {
-                    console.log('DATA1', data1.data);
-                    return $http.get('http://cartel2016.com/api/get/resultats.php?delegation_equipe2=' + delegation)
-                        .then(function(data2) {
-                            console.log('DATA2', data2.data);
-                            console.log((data1.data).concat(data2.data));
-                            return (data1.data).concat(data2.data);
-                        });
+                    return (data1.data);
                 });
+
         };
 
         var Actu = function() {
@@ -94,7 +97,8 @@ module.exports = function(app) {
             Event: Event,
             ActuDetail: ActuDetail,
             getSport: getSport,
-            getDelegation: getDelegation
+            getDelegation: getDelegation,
+            getClassement: getClassement
 
         };
     }
