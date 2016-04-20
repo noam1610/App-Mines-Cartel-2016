@@ -7,11 +7,13 @@
             <button class="button button-clear button-positive" ng-click="vm.myGoBack()">Back</button>
         </div>
         <div class="has-header" style="padding-top: 4.5em;"></div>
-        <div ng-repeat="contact in vm.listDesContacts">
-            <div>
-                <h3 class="home" align="center">{{contact.title}}</h3>
-                <p class="home" align="center"> {{contact.description}}</p>
-                <img style="width: {{vm.width/2}}px;display: block; margin-left: auto; margin-right: auto;" src="{{contact.logo}}" alt="">
+
+        <div class="list">
+            <div class="item" ng-repeat="contact in vm.listDesContacts">
+                <div>
+                    <h2 class="home" align="center">{{contact.Name}}</h2>
+                    <img style="width: {{vm.width/2}}px;display: block; margin-left: auto; margin-right: auto;" src="{{contact.image}}" alt="">
+                </div>
             </div>
         </div>
     </ion-content>
