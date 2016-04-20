@@ -17,10 +17,10 @@ module.exports = function(app) {
         vm.menu = [{
             'title': 'NEWS',
             'array': [{
-                    'title': 'acceuil',
+                    'title': 'Acceuil',
                     'page': 'home'
                 }, {
-                    'title': 'actualité',
+                    'title': 'Actualité',
                     'page': 'actu'
                 }, {
                     'title': 'Calendrier',
@@ -36,15 +36,13 @@ module.exports = function(app) {
             'array': [
 
                 {
-                    'title': 'par sport',
+                    'title': 'Par Sport',
                     'page': 'sport'
                 }, {
                     'title': 'Par Délégation',
                     'page': 'resdelegation'
-                }
-
-                , {
-                    'title': 'classement',
+                }, {
+                    'title': 'Classement',
                     'page': 'classement'
                 }
 

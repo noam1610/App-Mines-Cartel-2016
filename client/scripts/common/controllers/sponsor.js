@@ -11,13 +11,25 @@ module.exports = function(app) {
         var vm = this;
         vm.controllername = fullname;
 
+      
         vm.width = $window.innerWidth;
         vm.height = $window.innerHeight;
 
         vm.listDesContacts = [{
-            'title': 'Mines De Paris',
-            'logo': 'images/app/logoMines.png',
-            'description': 'Bla kjdsf ldkf skdjf'
+            'Name': 'Mines De Paris',
+            'image': 'images/app/logoMines.png'
+        }, {
+            'Name': 'Alten',
+            'image': 'images/app/alten.png'
+        }, {
+            'Name': ' Mines ParisTech Alumni',
+            'image': 'images/app/alumni.png'
+        }, {
+            'Name': 'Mairie de Paris',
+            'image': 'images/app/mairie.svg'
+        }, {
+            'Name': 'Mines ParisTech Fondation',
+            'image': 'images/app/fondation.png'
         }];
 
         vm.myGoBack = function() {

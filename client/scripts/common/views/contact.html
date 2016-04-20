@@ -11,9 +11,11 @@
         <div class="list">
             <div class="item" ng-repeat="contact in vm.listDesContacts">
                 <div>
-                    <h3 class="home" align="center">{{contact.Name}}</h3>
-                    <p class="home" align="center"> {{contact.description}}</p>
-                    <img style="width: {{vm.width/2}}px;display: block; margin-left: auto; margin-right: auto;" src="{{contact.logo}}" alt="">
+                    <h2 class="home" align="center">{{contact.Name}}</h2>
+                    <p>{{contact.numero1}}</p>
+                    <p>{{contact.numero2}}</p>
+                    <p>Horaires : {{contact.horaires}}</p>
+                    <p>Mail : {{contact.mail}}</p>
                 </div>
             </div>
         </div>
