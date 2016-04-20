@@ -7,16 +7,62 @@
         </div>
 
         <div class="has-header" style="padding-top: 4.5em;">
-
-            <div class="list">
-
-                <h4 align="center" style="color: blue">Votre sport</h4>
-                <ul class="list">
-                    <li class="item bold" ng-repeat="sport in vm.sports" align="center" style="color: rgb(120,120,230)" ui-sref="menu.sportDetail({ id: sport })">
-                        {{sport}}
-                    </li>
-                </ul>
+            <h3 class="home">Planning des match</h3>
+            <div align="center">
+                <div>Choisissez votre sport</div>
+                <select ng-model="vm.sport">
+                    <option ng-repeat="sport in vm.sports">{{sport}}</option>
+                </select>
             </div>
-        </div>
+            <div align="center" style=""> {{vm.sport}}</div>
+            <div style="padding: 1em;"></div>
+
+            <div align="center">
+                <div>Choisissez votre delegation</div>
+                <select ng-model="vm.delegation">
+                    <option ng-repeat="delegation in vm.delegations">{{delegation}}</option>
+                </select>
+            </div>
+            <div align="center" style=""> {{vm.delegation}}</div>
+            <div style="padding: 1em;"></div>
+            <div align="center">
+                <button align="center" ng-click="vm.getPlanning()" class="button button-outline button-calm">
+                    Afficher le planning
+                </button>
+            </div>
+
+            <div style="padding: 1em;"></div>
+
+            <ul class="list">
+                <li class="item" ng-repeat="resultat in vm.resultat">
+                    <div class="row">
+                        <b>Sport</b> {{resultat.sport}}
+                    </div>
+                    <div class="row">
+                        <div class="col-33 equipe" align="center">
+
+                            <div> {{resultat.delegation_equipe1}}</div>
+                            <div> {{resultat.equipe1}}</div>
+                        </div>
+                        <div class="col-33" align="center">
+                            VS
+                        </div>
+                        <div class="col-33 equipe" align="center">
+                            <div> {{resultat.delegation_equipe2}}</div>
+                            <div> {{resultat.equipe2}}</div>
+                        </div>
+                    </div>
+                    <div class="commentaire" align="center">
+                        <div> Des': {{resultat.description}}</div>
+                        <div>Date': {{resultat.date}}</div>
+                        <div>Lieu': {{resultat.lieu}}</div>
+
+                        <div>LieuMap':
+                            <a href="{{resultat.lieu_maps}}"> Go to map</a>
+                        </div>
+                </li>
+            </ul>
+
+            </div>
     </ion-content>
 </ion-view>
