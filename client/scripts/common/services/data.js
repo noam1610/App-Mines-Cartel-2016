@@ -39,6 +39,14 @@ module.exports = function(app) {
                 });
         };
 
+        var getPlanning = function(sport, delegation) {
+            return $http.get('http://cartel2016.com/api/get/planningmatch.php?sport=' + sport + '&delegation=' + delegation)
+                .then(function(data) {
+                    console.log('noam', data);
+                    return data.data;
+                });
+        };
+
         var getClassement = function(sport) {
             return $http.get('http://cartel2016.com/api/get/classement.php?sport=' + sport)
                 .then(function(data) {
@@ -74,6 +82,7 @@ module.exports = function(app) {
                     console.log('err', err);
                     return err;
                 });
+
         };
 
         var ActuDetail = function(id) {
@@ -98,7 +107,8 @@ module.exports = function(app) {
             ActuDetail: ActuDetail,
             getSport: getSport,
             getDelegation: getDelegation,
-            getClassement: getClassement
+            getClassement: getClassement,
+            getPlanning: getPlanning
 
         };
     }
