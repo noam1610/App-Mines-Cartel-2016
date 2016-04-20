@@ -7,7 +7,7 @@
         </div>
 
         <div class="has-header" style="padding-top: 4.5em;">
-            <h3 align="center">Résultat pour le {{vm.sport}}</h3>
+            <h3 style="color:#011f4b" align="center">Résultat pour le {{vm.sport}}</h3>
             <ul class="list">
                 <li class="item" ng-repeat="resultat in vm.resultat">
                     <div class="row">
@@ -16,7 +16,7 @@
                         </div>
                         <div class="col-33" align="center">
                             <div>
-                                <p>{{resultat.date}}</p>
+                                <p style="color: #433E90;">{{resultat.date}}</p>
                             </div>
 
                             <div ng-if="vm.vainqueur(resultat)">
@@ -33,7 +33,7 @@
                             {{resultat.equipe2}}
                         </div>
                     </div>
-                    <div class="row commentaire" align="center">
+                    <div  class="row commentaire" align="center">
                         Com': {{resultat.description}}
                     </div>
                 </li>

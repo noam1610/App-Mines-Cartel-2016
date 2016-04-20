@@ -10,25 +10,26 @@
 
             <div class="list" ng-repeat="poule in vm.classement">
 
-                <h3 class="home" align="center">{{poule.nom}}</h3>
+                <h3 class="home" align="center" style="color: #a19c9c;">{{poule.nom}}</h3>
+                <p class="home" align="center" style="color:#011f4b;">{{poule.sport}}</p>
                 <ul class="list">
                     <li class="item" ng-repeat="class in poule.classement">
                         <div class="row">
-                            <div class="col-33 equipe" style="" align="center">
+                            <div class="col-33 equipe" style="color: #ae5a41" align="center">
                                 {{class.classements}}
                             </div>
                             <div class="col-33" align="center">
 
-                                <div>
+                                <div style="color:  #03396c">
                                     {{class.delegation}}
                                 </div>
 
-                                <div>
+                                <div style="color: #6497b1">
                                     {{class.equipe}}
                                 </div>
 
                             </div>
-                            <div class="col-33 equipe" align="center">
+                            <div class="col-33 equipe" align="center" style="color: #011f4b">
                                 {{class.points}}
                             </div>
                         </div>

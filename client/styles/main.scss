@@ -4,6 +4,8 @@ body{
     font-family: courier;
 }
 
+
+
 .home {
     font-family: serif;
     font-weight: bold;
@@ -26,7 +28,8 @@ body{
 .head-2 {
     padding: 0.4em;
     padding-top: 1em;
-    color: green;
+    color: #011f4b;
+    font-weight: 900;
     font-size: 1.6em;
 }
 
@@ -43,7 +46,8 @@ body{
 }
 
 .equipe {
-    font-family: cursive;
+    //font-family: cursive;
+    color: #433e90;
     font-weight: 700;
     font-style: italic;
     text-align: center;
@@ -51,7 +55,7 @@ body{
 }
 
 .scoreRouge {
-    font-family: cursive;
+    //font-family: cursive;
     font-weight: 700;
     font-style: italic;
     color: rgb(210, 20, 34);
@@ -60,7 +64,7 @@ body{
 }
 
 .scoreVert {
-    font-family: cursive;
+    //font-family: cursive;
     font-weight: 700;
     font-style: italic;
     color: rgb(120, 230, 34);
@@ -69,6 +73,7 @@ body{
 }
 
 .commentaire {
+    color: #ae5a41;
     font-family: monospace;
     font-style: italic;
     text-align: center;
