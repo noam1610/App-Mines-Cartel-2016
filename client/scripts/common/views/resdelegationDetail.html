@@ -7,7 +7,7 @@
         </div>
 
         <div class="has-header" style="padding-top: 4.5em;">
-            <h3 align="center">Résultat Pour  {{vm.delegation1}}</h3>
+            <h3 align="center" style="color: #011f4b;">Résultat Pour  {{vm.delegation1}}</h3>
             <ul class="list">
                 <li class="item" ng-repeat="resultat in vm.resultat">
                     <div class="row">
@@ -16,16 +16,16 @@
                         </div>
                         <div class="col-33" align="center">
                             <div>
-                                <p>{{resultat.date}}</p>
+                                <p style="color: #3C70B8;">{{resultat.date}}</p>
                             </div>
 
                             <div ng-if="vm.vainqueur(resultat)">
-                                <span class="scoreVert">{{resultat.score1}}</span> -
-                                <span class="scoreRouge">{{resultat.score2}}</span>
+                                <span class="scoreVert" style="color: #ae5a41;">{{resultat.score1}}</span> -
+                                <span class="scoreRouge" style="color: #ae5a41;">{{resultat.score2}}</span>
                             </div>
                             <div ng-if="!vm.vainqueur(resultat)">
-                                <span class="scoreRouge">{{resultat.score1}}</span> -
-                                <span class="scoreVert">{{resultat.score2}}</span>
+                                <span class="scoreRouge" style="color: #ae5a41;">{{resultat.score1}}</span> -
+                                <span class="scoreVert" style="color: #ae5a41;">{{resultat.score2}}</span>
                             </div>
 
                         </div>
