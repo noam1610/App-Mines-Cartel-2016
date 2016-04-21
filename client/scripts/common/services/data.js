@@ -40,9 +40,15 @@ module.exports = function(app) {
         };
 
         var getPlanning = function(sport, delegation) {
+            if(delegation === null || !delegation)
+            {
+                delegation='';
+                //console.log('noam','http://cartel2016.com/api/get/planningmatch.php?sport=' + sport + '&delegation=' + delegation);
+
+            }
             return $http.get('http://cartel2016.com/api/get/planningmatch.php?sport=' + sport + '&delegation=' + delegation)
                 .then(function(data) {
-                    console.log('noam', data);
+                    //console.log('noam', sport+delegation);
                     return data.data;
                 });
         };
