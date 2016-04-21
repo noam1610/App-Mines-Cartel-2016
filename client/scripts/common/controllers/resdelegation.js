@@ -27,7 +27,7 @@ module.exports = function(app) {
             $ionicHistory.goBack();
         };
 
-        vm.delegation = ['paris', 'nancy', 'saint-etienne', 'albi', 'douai', 'ales', 'vigo', 'oviedo', 'bochum', 'emines'];
+        vm.delegation = ['paris','nantes', 'nancy', 'saint-etienne', 'albi', 'douai', 'ales', 'vigo', 'oviedo', 'bochum', 'emines'];
 
     }
 

@@ -23,7 +23,7 @@ module.exports = function(app) {
                 });
         };
 
-        vm.delegations = ['paris', 'nancy', 'saint-etienne', 'albi', 'douai', 'ales', 'vigo', 'oviedo', 'bochum', 'emines'];
+        vm.delegations = ['paris','nantes', 'nancy', 'saint-etienne', 'albi', 'douai', 'ales', 'vigo', 'oviedo', 'bochum', 'emines'];
 
         vm.sports = ['rugby_h',
             'rugby_f',
