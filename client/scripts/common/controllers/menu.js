@@ -17,7 +17,7 @@ module.exports = function(app) {
         vm.menu = [{
             'title': 'NEWS',
             'array': [{
-                    'title': 'Acceuil',
+                    'title': 'Accueil',
                     'page': 'home'
                 }, {
                     'title': 'Actualité',
