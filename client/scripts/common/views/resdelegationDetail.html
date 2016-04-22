@@ -10,6 +10,13 @@
             <h3 align="center" style="color: #011f4b;">Résultat Pour  {{vm.delegation1}}</h3>
             <ul class="list">
                 <li class="item" ng-repeat="resultat in vm.resultat">
+                     <div class="row">
+                          <div class="col-33" align="center">
+                        </div>
+                          <div class="col-33 " align="center">
+                            {{resultat.sport}}
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-33 equipe" align="center">
                             {{resultat.equipe1}}
