@@ -17,7 +17,6 @@ module.exports = function(app) {
             $ionicHistory.goBack();
         };
 
-
         data.Actu()
             .then(function(actualite) {
                 console.log('DATA ACTU');

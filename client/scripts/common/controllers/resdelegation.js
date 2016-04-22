@@ -29,6 +29,7 @@ module.exports = function(app) {
 
         vm.delegation = ['paris', 'nantes','nancy', 'saint-etienne', 'albi', 'douai', 'ales', 'vigo', 'oviedo', 'bochum', 'emines'];
 
+
     }
 
     controller.$inject = deps;
