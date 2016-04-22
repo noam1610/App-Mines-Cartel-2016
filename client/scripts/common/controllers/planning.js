@@ -29,12 +29,14 @@ module.exports = function(app) {
 
         vm.sports = ['rugby_h',
             'rugby_f',
-            'natation_h',
-            'natation_f',
+            'relais_natation',
+            'relais_athletisme',
             'petanque',
             'tennis_de_table',
             'volley_h',
             'volley_f',
+            'foot_h',
+            'foot_f',
             'cross_h',
             'cross_f',
             'handball',
@@ -46,7 +48,6 @@ module.exports = function(app) {
             'badminton',
             'escalade_h',
             'escalade_f',
-            'athle',
             'pompom'
         ];
     }
